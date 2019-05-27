@@ -32,9 +32,9 @@ conda update conda
 echo " -----> Installing R Kernel."
 conda install -c anaconda jupyter_client
 wget https://cloud.r-project.org/src/base/R-3/R-3.6.0.tar.gz
-tar -xvf  R-3.6.0.tar.gz  R-3.6.0/
-cd R-3.6.0/bin
-./R.exe
+tar -xvf  R-3.6.0.tar.gz 
+cd R-3.6.0
+./configure
 install.packages("devtools")
 devtools::install_github("IRkernel/IRkernel")
 IRkernel::installspec()
