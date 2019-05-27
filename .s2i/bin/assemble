@@ -16,6 +16,31 @@ echo " -----> Installing npm packages."
 
 npm install -g configurable-http-proxy
 
+echo " -----> Installing conda packages."
+# Go to home directory
+cd ~
+# You can change what anaconda version you want at 
+# https://repo.continuum.io/archive/
+wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+bash Anaconda3-5.0.1-Linux-x86_64.sh -b -p ~/anaconda
+rm Anaconda3-5.0.1-Linux-x86_64.sh
+echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
+# Refresh basically
+source .bashrc
+conda update conda
+
+echo " -----> Installing R Kernel."
+conda install -c anaconda jupyter_client
+wget https://cloud.r-project.org/src/base/R-3/R-3.6.0.tar.gz
+tar cfz R-3.6.0.tar.gz
+cd R-3.6.0/bin
+./R.exe
+install.packages("devtools")
+devtools::install_github("IRkernel/IRkernel")
+IRkernel::installspec()
+
+
+
 # Copy global JupyterHub config into place.
 
 cp /tmp/src/jupyterhub_config.py /opt/app-root/etc/
