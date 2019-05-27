@@ -35,7 +35,7 @@ conda install -c anaconda jupyter_client
 wget https://cloud.r-project.org/src/base/R-3/R-3.6.0.tar.gz
 tar -xvf  R-3.6.0.tar.gz 
 cd R-3.6.0
-./configure
+./usr/bin/R.exe
 install.packages("devtools")
 devtools::install_github("IRkernel/IRkernel")
 IRkernel::installspec()
