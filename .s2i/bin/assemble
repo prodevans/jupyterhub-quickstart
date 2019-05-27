@@ -31,16 +31,7 @@ source .bashrc
 conda update conda
 
 echo " -----> Installing R Kernel package"
-conda install -c anaconda jupyter_client
-wget https://cloud.r-project.org/src/base/R-3/R-3.6.0.tar.gz
-tar -xvf  R-3.6.0.tar.gz 
-cd R-3.6.0
-./usr/bin/R.exe
-install.packages("devtools")
-devtools::install_github("IRkernel/IRkernel")
-IRkernel::installspec()
-
-
+conda install -c r r-irkernel -y
 
 
 # Copy global JupyterHub config into place.
