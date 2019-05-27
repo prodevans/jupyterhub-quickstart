@@ -29,7 +29,7 @@ echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc
 source .bashrc
 conda update conda
 
-echo " -----> Installing R Kernel."
+echo " -----> Installing R Kernel package"
 conda install -c anaconda jupyter_client
 wget https://cloud.r-project.org/src/base/R-3/R-3.6.0.tar.gz
 tar -xvf  R-3.6.0.tar.gz 
