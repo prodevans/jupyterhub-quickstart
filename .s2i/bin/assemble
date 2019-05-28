@@ -30,6 +30,9 @@ conda update conda
 
 echo " -----> Installing R Kernel package"
 conda install -c r r-essentials -y
+install.packages("devtools")
+devtools::install_github("IRkernel/IRkernel")
+IRkernel::installspec()
 
 # Copy global JupyterHub config into place.
 
