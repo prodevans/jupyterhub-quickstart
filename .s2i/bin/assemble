@@ -16,7 +16,7 @@ echo " -----> Installing npm packages."
 npm install -g configurable-http-proxy
 
 echo " -----> Installing R package"
-pip install --user alfpy==1.0.4
+pip install -r alfpy==1.0.4
 import alfpy
 mkdir ~/local/R_libs
 module avail
