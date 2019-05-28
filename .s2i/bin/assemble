@@ -13,15 +13,18 @@ pip install -r /tmp/src/requirements.txt
 # Install npm packages required by JupyterHub.
 
 echo " -----> Installing npm packages."
-
 npm install -g configurable-http-proxy
 
 echo " -----> Installing R package"
-yum install R -y
+pip install --user alfpy==1.0.4
+import alfpy
+mkdir ~/local/R_libs
+module avail
+module load R/3.3.1
 R
-install.packages("devtools")
-devtools::install_github("IRkernel/IRkernel")
-IRkernel::installspec()
+install.packages("remeta", repos="http://cran.r-project.org", lib="~/local/R_libs/")
+library("remeta", lib="~/local/R_libs/")
+
 
 
 # Copy global JupyterHub config into place.
