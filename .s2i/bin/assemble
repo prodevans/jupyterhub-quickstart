@@ -17,7 +17,6 @@ npm install -g configurable-http-proxy
 
 echo " -----> Installing R package"
 pip install alfpy==1.0.4
-import alfpy
 mkdir ~/local/R_libs
 module avail
 module load R/3.3.1
