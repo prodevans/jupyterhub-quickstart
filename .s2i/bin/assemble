@@ -16,15 +16,18 @@ echo " -----> Installing npm packages."
 npm install -g configurable-http-proxy
 
 echo " -----> Installing R package"
-pip install alfpy==1.0.4
-module avail
-module load R/3.3.1
-R
-install.packages("remeta", repos="http://cran.r-project.org", lib="~/local/R_libs/")
-library("remeta", lib="~/local/R_libs/")
-
-
-
+# Go to home directory
+cd ~
+# You can change what anaconda version you want at 
+# https://repo.continuum.io/archive/
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -b -p ~/anaconda
+rm -f Miniconda3-latest-Linux-x86_64.sh
+echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
+# Refresh basically
+source .bashrc
+conda update conda
+conda install -c r rstudio 
 # Copy global JupyterHub config into place.
 
 cp /tmp/src/jupyterhub_config.py /opt/app-root/etc/
