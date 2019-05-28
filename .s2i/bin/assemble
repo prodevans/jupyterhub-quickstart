@@ -17,9 +17,7 @@ echo " -----> Installing npm packages."
 npm install -g configurable-http-proxy
 
 echo " -----> Installing R package"
-yum install epel-release
-yum update
-yum install R -y
+yum --enablerepo=epel --enablerepo="rhel-7-server-optional-rpms" install R  -y
 R
 install.packages("devtools")
 devtools::install_github("IRkernel/IRkernel")
