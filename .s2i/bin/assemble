@@ -15,27 +15,6 @@ pip install -r /tmp/src/requirements.txt
 echo " -----> Installing npm packages."
 npm install -g configurable-http-proxy
 
-# echo " -----> Installing R package"
-# # Go to home directory
-# cd ~
-# # Downloading package
-# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-# bash Miniconda3-latest-Linux-x86_64.sh -b -p ~/anaconda
-# rm -f Miniconda3-latest-Linux-x86_64.sh
-# echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
-# # Refresh basically
-# source .bashrc
-# conda update conda
-# conda install -c r r-essentials
-# echo "Starting R package"
-# R --save
-# install.packages(c('rzmq','repr','IRkernel','IRdisplay'), repos = 'http://irkernel.github.io/', type = 'source')
-# IRkernel::installspec()
-# quit()
-# install.packages("devtools")
-# devtools::install_github("IRkernel/IRkernel")
-# IRkernel::installspec()
-
 # Copy global JupyterHub config into place.
 cp /tmp/src/jupyterhub_config.py /opt/app-root/etc/
 
