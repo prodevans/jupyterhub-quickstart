@@ -26,7 +26,6 @@ echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc
 # Refresh basically
 source .bashrc
 conda update conda
-conda update ipython-notebook
 conda install -c r ipython-notebook r-irkernel
 # conda install -c r r-essentials
 echo "Starting R package"
