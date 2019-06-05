@@ -65,5 +65,9 @@ cp jupyter.png /opt/app-root/share/jupyterhub/static/images/jupyter.png
 # rm -f /opt/app-root/share/jupyterhub/static/favicon.ico
 cp favicon.ico /opt/app-root/share/jupyterhub/static/favicon.ico
 
+# Changing titles
+jupyter lab build --name='iVentura'
+
+
 # Fixup permissions on directories and files.
 fix-permissions /opt/app-root
