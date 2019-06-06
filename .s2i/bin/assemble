@@ -64,6 +64,7 @@ cp jupyterhub-80.png /opt/app-root/share/jupyterhub/static/images/jupyterhub-80.
 cp jupyter.png /opt/app-root/share/jupyterhub/static/images/jupyter.png
 # rm -f /opt/app-root/share/jupyterhub/static/favicon.ico
 cp favicon.ico /opt/app-root/share/jupyterhub/static/favicon.ico
+cp page.html /opt/app-root/share/jupyterhub/templates/page.html
 
 
 # Fixup permissions on directories and files.
